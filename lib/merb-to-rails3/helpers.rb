@@ -89,6 +89,16 @@ module MerbToRails3
         after_filter(*args)
       end
 
+      def skip_after(*args)
+        merb_deprec("use skip_filter")
+        skip_filter(*args)
+      end
+
+      def skip_before(*args)
+        merb_deprec("use skip_filter")
+        skip_filter(*args)
+      end
+
       module InstanceMethods
         include ViewAndController
 

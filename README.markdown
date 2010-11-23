@@ -11,6 +11,8 @@ Controller:
  * redirect => redirect_to
  * before => before_filter
  * after => after_filter
+ * skip_before => skip_filter
+ * skip_after => skip_filter
 
 Controller/View:
 
