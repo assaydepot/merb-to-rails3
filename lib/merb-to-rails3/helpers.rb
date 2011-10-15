@@ -9,7 +9,7 @@ end
 module MerbToRails3
   module Helpers
     module ViewAndController
-      def url(name, options)
+      def url(name, options = {})
         path = "#{name}_path"
         merb_deprec("use #{path}")
         send(path, options)
