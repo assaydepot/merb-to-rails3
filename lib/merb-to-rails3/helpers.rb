@@ -9,10 +9,10 @@ end
 module MerbToRails3
   module Helpers
     module ViewAndController
-      def url(name)
+      def url(name, options)
         path = "#{name}_path"
         merb_deprec("use #{path}")
-        send(path)
+        send(path, options)
       end
 
       def resource(*args)
@@ -44,7 +44,7 @@ module MerbToRails3
         end
         render args
       end
-      
+
       def message
         merb_deprec("use flash")
         flash
